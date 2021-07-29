@@ -1,0 +1,27 @@
+<div
+  fxLayout
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutAlign="space-around center"
+>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <mat-label>UserName: </mat-label>
+    <mat-form-field appearance="standard">
+      <input matInput formControlName="userName" />
+      <mat-hint *ngIf="userForm.invalid && (userForm.dirty || userForm.touched)"
+        >UserName is required</mat-hint
+      >
+    </mat-form-field>
+
+    <br />
+
+    <mat-label>Password: </mat-label>
+    <mat-form-field appearance="standard">
+      <input matInput formControlName="password" type="password" />
+    </mat-form-field>
+
+    <br />
+
+    <button fx mat-raised-button color="primary" type="submit">Login</button>
+  </form>
+</div>
