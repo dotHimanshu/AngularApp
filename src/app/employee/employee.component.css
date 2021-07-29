@@ -1,0 +1,21 @@
+.mat-row .pointer {
+  cursor: pointer;
+}
+.blue {
+  color: blue;
+}
+
+.right-button {
+  float: right;
+}
+
+.w-100 {
+  width: 100%;
+}
+.m5 {
+  margin: 5px 5px 0px 5px;
+}
+
+.inline-block {
+  display: inline-block;
+}

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Abis",
+      "password": "Test@123"
+    },
+    {
+      "id": 2,
+      "userName": "Kles",
+      "password": "Test@123"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Emp 1",
+      "department": "Development",
+      "salary": "20500",
+      "id": 101
+    },
+    {
+      "id": 102,
+      "name": "Emp 2",
+      "department": "Development",
+      "salary": 1500
+    },
+    {
+      "name": "Emp 3",
+      "department": "QA",
+      "salary": "18001",
+      "id": 103
+    },
+    {
+      "id": 104,
+      "name": "Emp 4",
+      "department": "QA",
+      "salary": 1200
+    }
+  ]
+}

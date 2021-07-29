@@ -1,0 +1,28 @@
+<div class="header" fxLayout="row" fxLayoutAlign="start center">
+  <div fxLayoutAlign="center center">
+    <span class="logo" *ngIf="!isLoggedIn()">My App Login</span>
+  </div>
+
+  <div *ngIf="isLoggedIn()" fxFlex="2 1 auto" fxLayoutAlign="center center">
+    <div fxflex="none" fxLayout="start start">
+      <button mat-button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a routerLink="home" mat-menu-item>Home</a>
+        <a routerLink="employee" mat-menu-item>Employee</a>
+      </mat-menu>
+    </div>
+
+    <div fxFlex="grow" fxLayoutAlign="center center">
+      <a routerLink="home" class="logo">Welcome {{ currentUser.userName }}</a>
+    </div>
+    <div fxFlex="nogrow" fxLayoutAlign="end center">
+      <button fx mat-raised-button color="primary" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

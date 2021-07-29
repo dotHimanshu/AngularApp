@@ -1,0 +1,59 @@
+<div *ngIf="emp != null || isAdd">
+  <mat-card>
+    <mat-card-title>{{ isAdd ? "Add" : "Edit" }} Employee</mat-card-title>
+    <form [formGroup]="empForm" #form>
+      <mat-form-field class="inputs">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="emp.name"
+          formControlName="name"
+        />
+        <mat-hint *ngIf="name.invalid && (name.dirty || name.touched)"
+          >Name is required.</mat-hint
+        >
+      </mat-form-field>
+      <mat-form-field class="inputs">
+        <mat-label>Department</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="emp.department"
+          formControlName="department"
+        />
+        <mat-hint
+          *ngIf="department.invalid && (department.dirty || department.touched)"
+          >Department is required.</mat-hint
+        >
+      </mat-form-field>
+      <mat-form-field class="inputs">
+        <mat-label>Salary</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="emp.salary"
+          formControlName="salary"
+        />
+      </mat-form-field>
+      <button
+        *ngIf="!isAdd"
+        class="ml"
+        mat-raised-button
+        color="primary"
+        (click)="editEmp()"
+      >
+        Update
+      </button>
+      <button
+        *ngIf="isAdd"
+        class="ml"
+        mat-raised-button
+        color="primary"
+        (click)="addEmployee()"
+      >
+        Save
+      </button>
+    </form>
+  </mat-card>
+</div>
